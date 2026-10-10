@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>أذكاري</title>
+  <meta name="description" content="أذكاري: أذكار حصن المسلم من الكتاب والسنة. قراءة مريحة، فهرس كامل، بحث ومفضلة وسبحة إلكترونية.">
+  <meta property="og:title" content="أذكاري · سبحة إلكترونية ودعاء"><meta property="og:description" content="شارك سبحة باسم مَن تحب، وافتح الرابط للذكر والدعاء مباشرة."><meta property="og:type" content="website"><meta property="og:image" content="./assets/muslim-children.webp"><meta name="theme-color" content="#127b78"><meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="./manifest.webmanifest?v=6"><link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23176e70'/%3E%3Cpath d='M43 14a22 22 0 1 0 6 34A22 22 0 0 1 43 14Z' fill='%23f1ce7d'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css?v=6"><script defer src="./data.js?v=6"></script><script defer src="./app.js?v=6"></script>
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <header class="header"><div class="header-inner">
+    <button class="brand" data-action="home" aria-label="أذكاري، الرئيسية"><span class="brand-mark">☾</span><span><strong>أذكاري</strong><small>مِن أذكار الكتاب والسُّنّة</small></span></button>
+    <div class="header-actions"><button class="icon-button sound-button" data-action="sound" id="sound-button" aria-label="كتم صوت النقر" aria-pressed="true" title="كتم صوت النقر">🔊</button><button class="icon-button" data-action="theme" id="theme-button" aria-label="تفعيل الوضع الليلي">☾</button><button class="install-button" data-action="install"><span>＋</span> تثبيت</button></div>
+  </div></header>
+  <div class="shell"><aside class="sidebar">
+    <p class="side-title">رفيق يومك</p>
+    <nav aria-label="التنقل الرئيسي" class="main-nav"><button data-action="home" data-nav="home" class="active"><span>▦</span> مكتبة الأذكار</button><button data-action="tasbih" data-nav="tasbih"><span>◉</span> السبحة الإلكترونية</button><button data-action="favorites" data-nav="favorites"><span>♡</span> المفضلة <b id="fav-total">٠</b></button><button data-action="last" id="last-button"><span>▤</span> متابعة القراءة</button></nav>
+    <div class="side-divider"></div><p class="side-title">أذكار قريبة منك</p>
+    <nav class="quick-nav" aria-label="أذكار يومية"><button data-open="27"><span class="mini-icon yellow">☀</span> الصباح والمساء</button><button data-open="25"><span class="mini-icon mint">✧</span> بعد الصلاة</button><button data-open="28"><span class="mini-icon lilac">☾</span> أذكار النوم</button><button data-open="34"><span class="mini-icon peach">♡</span> الهم والحزن</button></nav>
+    <div class="side-note"><span>✦</span><p>﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</p><small>سورة الرعد · ٢٨</small></div>
+    <button class="about-button" data-action="about">عن الكتاب والمصدر</button>
+  </aside>
+  <main id="main" tabindex="-1"><div id="home-view">
+    <section class="welcome"><div class="welcome-copy"><span class="eyebrow">يومٌ جميل يبدأ بذِكر الله</span><h1>أذكاري تُضيء يومي</h1><p>نذكر الله، ونملأ قلوبنا بالطمأنينة.</p><button class="primary" data-open="27">أذكار الصباح والمساء <span>☀</span></button></div><img src="./assets/muslim-children.webp" alt="طفلان مسلمان بأسلوب كرتوني يقرآن معًا في ساحة مسجد جميلة" width="1152" height="768" class="welcome-art"></section>
+    <button class="tasbih-entry" data-action="tasbih"><span class="tasbih-entry-icon">◉</span><span><strong>السبحة الإلكترونية</strong><small>ذكرٌ ودعاء · صدقة جارية باسم مَن تحب</small></span><span class="entry-link">افتح السبحة</span></button>
+    <section class="library" aria-labelledby="library-title"><div class="section-head"><div><span class="eyebrow">من الكتاب والسُّنّة</span><h2 id="library-title">مكتبة الأذكار</h2></div><span id="chapter-total" class="count-badge">١٣٢ بابًا</span></div>
+      <div class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="ابحث عن ذكر أو دعاء…" aria-label="البحث في عناوين الأبواب ونصوصها"><button id="clear-search" aria-label="مسح البحث" hidden>×</button></div>
+      <div id="filters" class="filters" aria-label="تصنيف الأذكار"></div><p class="results-info" id="results-info" role="status"></p><div id="chapter-grid" class="chapter-grid"></div>
+    </section>
+  </div><section id="reader-view" hidden aria-label="قراءة الأذكار"></section><section id="tasbih-view" hidden aria-label="السبحة الإلكترونية"></section>
+  <footer class="footer">أذكاري · من كتاب حصن المسلم لسعيد بن علي بن وهف القحطاني<button data-action="about">المصدر وملاحظات القراءة</button></footer>
+  </main></div>
+  <nav class="mobile-nav" aria-label="التنقل على الهاتف"><button data-action="home" data-nav="home" class="active"><span>▦</span>الأذكار</button><button data-action="tasbih" data-nav="tasbih"><span>◉</span>السبحة</button><button data-action="favorites" data-nav="favorites"><span>♡</span>المفضلة</button><button data-action="last"><span>▤</span>متابعة</button><button data-action="about"><span>ⓘ</span>عن الكتاب</button></nav>
+  <dialog id="dialog"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="icon-button" data-action="close-dialog" aria-label="إغلاق">×</button></div><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" class="toast" hidden></div>
+  <noscript><p class="empty">يرجى تفعيل JavaScript لفتح الأبواب والبحث في الأذكار. يمكنك أيضًا قراءة <a href="https://www.imadislam.com/hisnulmuslim/">الكتاب في المصدر</a>.</p></noscript>
+</body></html>

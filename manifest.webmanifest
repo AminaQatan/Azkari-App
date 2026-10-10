@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "أذكاري",
+  "short_name": "أذكاري",
+  "description": "أذكاري: أذكار الكتاب والسنة وسبحة إلكترونية بثيم كرتوني للأطفال",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6fbff",
+  "theme_color": "#127b78",
+  "icons": [
+    {
+      "src": "./assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
